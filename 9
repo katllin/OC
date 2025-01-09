@@ -1,1 +1,420 @@
+1
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % brew install nginx
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+######################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+######################################################################### 100.0%
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+It is expected behaviour that some formulae will fail to build in this old version.
+It is expected behaviour that Homebrew will be buggy and slow.
+Do not create any issues about this on Homebrew's GitHub repositories.
+Do not create any issues even if you think this message is unrelated.
+Any opened issues will be immediately closed without response.
+Do not ask for help from Homebrew or its maintainers on social media.
+You may ask for help in Homebrew's discussions but are unlikely to receive a response.
+Try to figure out the problem yourself and submit a fix as a pull request.
+We will review it but may or may not accept it.
+
+==> Fetching dependencies for nginx: ca-certificates, openssl@3 and pcre2
+==> Fetching ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2024-
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:7a
+######################################################################### 100.0%
+==> Fetching openssl@3
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/80e8c7a
+######################################################################### 100.0%
+==> Downloading https://github.com/openssl/openssl/releases/download/openssl-3.4
+==> Downloading from https://objects.githubusercontent.com/github-production-rel
+######################################################################### 100.0%
+==> Fetching pcre2
+==> Downloading https://ghcr.io/v2/homebrew/core/pcre2/manifests/10.44
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:fe61ece0fe11
+######################################################################### 100.0%
+==> Fetching nginx
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/80e8c7a
+######################################################################### 100.0%
+==> Downloading https://nginx.org/download/nginx-1.27.3.tar.gz
+######################################################################### 100.0%
+Warning: A newer Command Line Tools release is available.
+Update them from Software Update in System Preferences.
+
+If that doesn't show you any updates, run:
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+
+Alternatively, manually download them from:
+  https://developer.apple.com/download/all/.
+You should download the Command Line Tools for Xcode 14.2.
+
+==> Installing dependencies for nginx: ca-certificates, openssl@3 and pcre2
+==> Installing nginx dependency: ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2024-
+Already downloaded: /Users/ekaterinagerasimenko/Library/Caches/Homebrew/downloads/e16b55434e8bc1472ffb41e1a71c1b853417578c631fa1b69e8730f8cafca76c--ca-certificates-2024-11-26.bottle_manifest.json
+==> Pouring ca-certificates--2024-11-26.all.bottle.tar.gz
+==> Regenerating CA certificate bundle from keychain, this may take a while...
+🍺  /opt/homebrew/Cellar/ca-certificates/2024-11-26: 4 files, 239.4KB
+==> Installing nginx dependency: openssl@3
+Warning: A newer Command Line Tools release is available.
+Update them from Software Update in System Preferences.
+
+If that doesn't show you any updates, run:
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+
+Alternatively, manually download them from:
+  https://developer.apple.com/download/all/.
+You should download the Command Line Tools for Xcode 14.2.
+
+==> perl ./Configure --prefix=/opt/homebrew/Cellar/openssl@3/3.4.0 --openssldir=
+==> make
+
+==> make install MANDIR=/opt/homebrew/Cellar/openssl@3/3.4.0/share/man MANSUFFIX
+==> make HARNESS_JOBS=8 test TESTS=-test_afalg
+🍺  /opt/homebrew/Cellar/openssl@3/3.4.0: 7,227 files, 33.3MB, built in 3 minutes 6 seconds
+==> Installing nginx dependency: pcre2
+==> Downloading https://ghcr.io/v2/homebrew/core/pcre2/manifests/10.44
+Already downloaded: /Users/ekaterinagerasimenko/Library/Caches/Homebrew/downloads/22ed791461c5bf400adde8c3b432c1230866aa1db3c5cb81e06a6ff21cac96ee--pcre2-10.44.bottle_manifest.json
+==> Pouring pcre2--10.44.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/pcre2/10.44: 237 files, 6.4MB
+==> Installing nginx
+==> tar -cJf /opt/homebrew/Cellar/nginx/1.27.3/share/nginx/src/src.tar.xz .
+==> ./configure --sbin-path=/opt/homebrew/Cellar/nginx/1.27.3/bin/nginx --with-c
+==> make install
+==> Caveats
+Docroot is: /opt/homebrew/var/www
+
+The default port has been set in /opt/homebrew/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /opt/homebrew/etc/nginx/servers/.
+
+To start nginx now and restart at login:
+  brew services start nginx
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/nginx/bin/nginx -g daemon\ off\;
+==> Summary
+🍺  /opt/homebrew/Cellar/nginx/1.27.3: 12 files, 2.5MB, built in 23 seconds
+==> Running `brew cleanup nginx`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Caveats
+==> nginx
+Docroot is: /opt/homebrew/var/www
+
+The default port has been set in /opt/homebrew/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /opt/homebrew/etc/nginx/servers/.
+
+To start nginx now and restart at login:
+  brew services start nginx
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/nginx/bin/nginx -g daemon\ off\;
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % brew services start nginx
+==> Tapping homebrew/services
+Cloning into '/opt/homebrew/Library/Taps/homebrew/homebrew-services'...
+remote: Enumerating objects: 3772, done.
+remote: Counting objects: 100% (536/536), done.
+remote: Compressing objects: 100% (206/206), done.
+remote: Total 3772 (delta 409), reused 339 (delta 330), pack-reused 3236 (from 4)
+Receiving objects: 100% (3772/3772), 1.13 MiB | 4.14 MiB/s, done.
+Resolving deltas: 100% (1802/1802), done.
+Tapped 2 commands (52 files, 1.3MB).
+==> Successfully started `nginx` (label: homebrew.mxcl.nginx)
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % brew services start nginx
+Service `nginx` already started, use `brew services restart nginx` to restart.
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % brew uninstall nginx
+Uninstalling /opt/homebrew/Cellar/nginx/1.27.3... (12 files, 2.5MB)
+
+Warning: The following nginx configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /opt/homebrew/etc/nginx
+  /opt/homebrew/etc/nginx/fastcgi.conf
+  /opt/homebrew/etc/nginx/fastcgi.conf.default
+  /opt/homebrew/etc/nginx/fastcgi_params
+  /opt/homebrew/etc/nginx/fastcgi_params.default
+  /opt/homebrew/etc/nginx/koi-utf
+  /opt/homebrew/etc/nginx/koi-win
+  /opt/homebrew/etc/nginx/mime.types
+  /opt/homebrew/etc/nginx/mime.types.default
+  /opt/homebrew/etc/nginx/nginx.conf
+  /opt/homebrew/etc/nginx/nginx.conf.default
+  /opt/homebrew/etc/nginx/scgi_params
+  /opt/homebrew/etc/nginx/scgi_params.default
+  /opt/homebrew/etc/nginx/servers
+  /opt/homebrew/etc/nginx/uwsgi_params
+  /opt/homebrew/etc/nginx/uwsgi_params.default
+  /opt/homebrew/etc/nginx/win-utf
+==> Autoremoving 1 unneeded formula:
+pcre2
+Uninstalling /opt/homebrew/Cellar/pcre2/10.44... (237 files, 6.4MB)
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % brew update
+==> Updating Homebrew...
+Already up-to-date.
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % sudo dpkg --remove nginx
+Password:
+
+2
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % brew install wget
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+#=#=#                                                                          
+Warning: You are using macOS 12.
+We (and Apple) do not provide support for this old version.
+It is expected behaviour that some formulae will fail to build in this old version.
+It is expected behaviour that Homebrew will be buggy and slow.
+Do not create any issues about this on Homebrew's GitHub repositories.
+Do not create any issues even if you think this message is unrelated.
+Any opened issues will be immediately closed without response.
+Do not ask for help from Homebrew or its maintainers on social media.
+You may ask for help in Homebrew's discussions but are unlikely to receive a response.
+Try to figure out the problem yourself and submit a fix as a pull request.
+We will review it but may or may not accept it.
+
+==> Fetching dependencies for wget: libidn2
+==> Fetching libidn2
+==> Downloading https://ghcr.io/v2/homebrew/core/libidn2/manifests/2.3.7
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libidn2/blobs/sha256:621dbb561a
+######################################################################### 100.0%
+==> Fetching wget
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/3028c14
+######################################################################### 100.0%
+==> Downloading https://ftp.gnu.org/gnu/wget/wget-1.25.0.tar.gz
+######################################################################### 100.0%
+Warning: A newer Command Line Tools release is available.
+Update them from Software Update in System Preferences.
+
+If that doesn't show you any updates, run:
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+
+Alternatively, manually download them from:
+  https://developer.apple.com/download/all/.
+You should download the Command Line Tools for Xcode 14.2.
+
+==> Installing dependencies for wget: libidn2
+==> Installing wget dependency: libidn2
+==> Downloading https://ghcr.io/v2/homebrew/core/libidn2/manifests/2.3.7
+Already downloaded: /Users/ekaterinagerasimenko/Library/Caches/Homebrew/downloads/45d1d4d2930c4782bf53e761a1c0166cd8a40f4193ac8c44e86f0b6708e80354--libidn2-2.3.7.bottle_manifest.json
+==> Pouring libidn2--2.3.7.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libidn2/2.3.7: 81 files, 1MB
+==> Installing wget
+==> ./configure --sysconfdir=/opt/homebrew/etc --with-ssl=openssl --with-libssl-
+==> make install
+🍺  /opt/homebrew/Cellar/wget/1.25.0: 91 files, 4.5MB, built in 1 minute 16 seconds
+==> Running `brew cleanup wget`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+
+3
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ %    sudo nano /etc/pf.conf(файл конфигурации для pf)
+Password:
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % sudo pfctl -f /etc/pf.conf
+
+pfctl: Use of -f option, could result in flushing of rules
+present in the main ruleset added by the system at startup.
+See /etc/pf.conf for further details.
+
+No ALTQ support in kernel
+ALTQ related functions disabled
+/etc/pf.conf:25: Rules must be in order: options, normalization, queueing, translation, filtering
+/etc/pf.conf:26: Rules must be in order: options, normalization, queueing, translation, filtering
+/etc/pf.conf:27: Rules must be in order: options, normalization, queueing, translation, filtering
+pfctl: Syntax error in config file: pf rules not loaded
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % sudo pfctl -f /etc/pf.conf
+sudo pfctl -e(перезагружаем в новой конфигурации)
+pfctl: Use of -f option, could result in flushing of rules
+present in the main ruleset added by the system at startup.
+See /etc/pf.conf for further details.
+
+No ALTQ support in kernel
+ALTQ related functions disabled
+/etc/pf.conf:25: Rules must be in order: options, normalization, queueing, translation, filtering
+/etc/pf.conf:26: Rules must be in order: options, normalization, queueing, translation, filtering
+/etc/pf.conf:27: Rules must be in order: options, normalization, queueing, translation, filtering
+pfctl: Syntax error in config file: pf rules not loaded
+No ALTQ support in kernel
+ALTQ related functions disabled
+pfctl: pf already enabled
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % sudo pfctl -s all(проверяем статус)
+No ALTQ support in kernel
+ALTQ related functions disabled
+TRANSLATION RULES:
+nat-anchor "com.apple/*" all
+rdr-anchor "com.apple/*" all
+
+FILTER RULES:
+scrub-anchor "com.apple/*" all fragment reassemble
+anchor "com.apple/*" all
+
+DUMMYNET RULES:
+dummynet-anchor "com.apple/*" all
+
+INFO:
+Status: Enabled for 2 days 18:10:40           Debug: Urgent
+
+State Table                          Total             Rate
+  current entries                        0               
+  searches                          860885            3.6/s
+  inserts                                0            0.0/s
+  removals                               0            0.0/s
+Counters
+  match                             488855            2.1/s
+  bad-offset                             0            0.0/s
+  fragment                               0            0.0/s
+  short                                  0            0.0/s
+  normalize                              0            0.0/s
+  memory                                 0            0.0/s
+  bad-timestamp                          0            0.0/s
+  congestion                             0            0.0/s
+  ip-option                            850            0.0/s
+  proto-cksum                            0            0.0/s
+  state-mismatch                         0            0.0/s
+  state-insert                           0            0.0/s
+  state-limit                            0            0.0/s
+  src-limit                              0            0.0/s
+  synproxy                               0            0.0/s
+  dummynet                               0            0.0/s
+  invalid-port                           0            0.0/s
+
+TIMEOUTS:
+tcp.first                   120s
+tcp.opening                  30s
+tcp.established           86400s
+tcp.closing                 900s
+tcp.finwait                  45s
+tcp.closed                   90s
+tcp.tsdiff                   30s
+udp.first                    60s
+udp.single                   30s
+udp.multiple                 60s
+icmp.first                   20s
+icmp.error                   10s
+grev1.first                 120s
+grev1.initiating             30s
+grev1.estblished           1800s
+esp.first                   120s
+esp.estblished              900s
+other.first                  60s
+other.single                 30s
+other.multiple               60s
+frag                         30s
+interval                     10s
+adaptive.start             6000 states
+adaptive.end              12000 states
+src.track                     0s
+
+LIMITS:
+states        hard limit    10000
+app-states    hard limit    10000
+src-nodes     hard limit    10000
+frags         hard limit     5000
+tables        hard limit     1000
+table-entries hard limit   200000
+
+OS FINGERPRINTS:
+696 fingerprints loaded
+
+
+4
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % sudo nano /etc/pf.conf(файл конфигурации)
+Password:
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % sudo pfctl -f /etc/pf.conf
+sudo pfctl -e(перезагружаем с новой конфигурацией)
+pfctl: Use of -f option, could result in flushing of rules
+present in the main ruleset added by the system at startup.
+See /etc/pf.conf for further details.
+
+No ALTQ support in kernel
+ALTQ related functions disabled
+/etc/pf.conf:4: Rules must be in order: options, normalization, queueing, translation, filtering
+/etc/pf.conf:26: Rules must be in order: options, normalization, queueing, translation, filtering
+/etc/pf.conf:27: Rules must be in order: options, normalization, queueing, translation, filtering
+/etc/pf.conf:28: Rules must be in order: options, normalization, queueing, translation, filtering
+pfctl: Syntax error in config file: pf rules not loaded
+No ALTQ support in kernel
+ALTQ related functions disabled
+pfctl: pf already enabled
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % sudo pfctl -s all(проверяем статус)
+No ALTQ support in kernel
+ALTQ related functions disabled
+TRANSLATION RULES:
+nat-anchor "com.apple/*" all
+rdr-anchor "com.apple/*" all
+
+FILTER RULES:
+scrub-anchor "com.apple/*" all fragment reassemble
+anchor "com.apple/*" all
+
+DUMMYNET RULES:
+dummynet-anchor "com.apple/*" all
+
+INFO:
+Status: Enabled for 2 days 18:24:45           Debug: Urgent
+
+State Table                          Total             Rate
+  current entries                        0               
+  searches                          870625            3.6/s
+  inserts                                0            0.0/s
+  removals                               0            0.0/s
+Counters
+  match                             494351            2.1/s
+  bad-offset                             0            0.0/s
+  fragment                               0            0.0/s
+  short                                  0            0.0/s
+  normalize                              0            0.0/s
+  memory                                 0            0.0/s
+  bad-timestamp                          0            0.0/s
+  congestion                             0            0.0/s
+  ip-option                            866            0.0/s
+  proto-cksum                            0            0.0/s
+  state-mismatch                         0            0.0/s
+  state-insert                           0            0.0/s
+  state-limit                            0            0.0/s
+  src-limit                              0            0.0/s
+  synproxy                               0            0.0/s
+  dummynet                               0            0.0/s
+  invalid-port                           0            0.0/s
+
+TIMEOUTS:
+tcp.first                   120s
+tcp.opening                  30s
+tcp.established           86400s
+tcp.closing                 900s
+tcp.finwait                  45s
+tcp.closed                   90s
+tcp.tsdiff                   30s
+udp.first                    60s
+udp.single                   30s
+udp.multiple                 60s
+icmp.first                   20s
+icmp.error                   10s
+grev1.first                 120s
+grev1.initiating             30s
+grev1.estblished           1800s
+esp.first                   120s
+esp.estblished              900s
+other.first                  60s
+other.single                 30s
+other.multiple               60s
+frag                         30s
+interval                     10s
+adaptive.start             6000 states
+adaptive.end              12000 states
+src.track                     0s
+
+LIMITS:
+states        hard limit    10000
+app-states    hard limit    10000
+src-nodes     hard limit    10000
+frags         hard limit     5000
+tables        hard limit     1000
+table-entries hard limit   200000
+
+OS FINGERPRINTS:
+696 fingerprints loaded
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % 
 
