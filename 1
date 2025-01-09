@@ -1,0 +1,126 @@
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mkdir ~/students ~/mentors
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % touch ~/students/students_list.txt ~/mentors/mentors_list.txt
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % open ~/students/students_list.txt
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % open ~/mentors/mentors_list.txt 
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mv ~/mentors/mentors_list.txt ~/students/
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % rm -r ~/mentors
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mv ~/students ~/students_and_mentors
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % rm -r ~/students_and_mentors
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % 
+Last login: Wed Oct 16 20:53:11 on ttys000
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ssh root@kursenok.ru
+The authenticity of host 'kursenok.ru (188.225.47.37)' can't be established.
+ED25519 key fingerprint is SHA256:4XZynlwKdPREM8Fwuy5Gnm+9uxasO/QBOx2D0XP1k04.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'kursenok.ru' (ED25519) to the list of known hosts.
+root@kursenok.ru's password: 
+Permission denied, please try again.
+root@kursenok.ru's password: 
+Permission denied, please try again.
+root@kursenok.ru's password: 
+root@kursenok.ru: Permission denied (publickey,password).
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ssh root@kursenok.ru
+root@kursenok.ru's password: 
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.4.0-192-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed 16 Oct 2024 09:31:41 PM MSK
+
+  System load:  0.0                Processes:             124
+  Usage of /:   63.8% of 14.68GB   Users logged in:       0
+  Memory usage: 46%                IPv4 address for eth0: 188.225.47.37
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+116 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Wed Oct 16 21:29:40 2024 from 188.243.138.35
+root@1033041-cj43039:~# 
+root@1033041-cj43039:~# 
+root@1033041-cj43039:~# 
+root@1033041-cj43039:~# 
+root@1033041-cj43039:~# 
+root@1033041-cj43039:~# exit
+logout
+Connection to kursenok.ru closed.
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mkdir ~/students ~/mentors
+mkdir: /Users/ekaterinagerasimenko/students: File exists
+mkdir: /Users/ekaterinagerasimenko/mentors: File exists
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % touch ~/students/students_list.txt ~/mentors/mentors_list.txt
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % open ~/students/students_list.txt
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % open ~/mentors/mentors_list.txt 
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mv ~/mentors/mentors_list.txt ~/students/
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % rm -r ~/mentors
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mv ~/students ~/students_and_mentors
+
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % rm -r ~/students_and_mentors
+
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ssh root@80.68.156.82
+
+The authenticity of host '80.68.156.82 (80.68.156.82)' can't be established.
+ED25519 key fingerprint is SHA256:PgVl8E7qVN9ytKsGmrMUgaXTD5Axo+1hIUOozVyErDo.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '80.68.156.82' (ED25519) to the list of known hosts.
+root@80.68.156.82's password: 
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-122-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Oct 16 09:45:44 PM MSK 2024
+
+  System load:  0.0                Processes:             99
+  Usage of /:   13.6% of 14.68GB   Users logged in:       0
+  Memory usage: 21%                IPv4 address for eth0: 80.68.156.82
+  Swap usage:   0%                 IPv6 address for eth0: 2a03:6f00:4::779f
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+2 updates can be applied immediately.
+2 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+root@3628761-cj43039:~#  ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:gYcqj2Y0meU4hBf6/T4MjWVR6YRRIY6qPduI34Zing0 root@3628761-cj43039.twc1.net
+The key's randomart image is:
++---[RSA 3072]----+
+|  .   o=+o       |
+| o . oo+o        |
+|o o o ++o        |
+| + O .o...       |
+|  @ +=  S        |
+| + *o..          |
+|.E*..o.          |
+|.==*..o          |
+|+=+oo ..         |
++----[SHA256]-----+
+root@3628761-cj43039:~# 
