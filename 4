@@ -1,0 +1,37 @@
+1 часть:
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % echo "Это содержимое file1." > file1
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % cp file1 file2
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ln -s file1 file3
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ln file1 file4
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ls -li file1 file2 file3 file4
+153176641 -rw-r--r--  2 ekaterinagerasimenko  staff  54 31 окт 11:49 file1
+153176799 -rw-r--r--  1 ekaterinagerasimenko  staff  54 31 окт 11:49 file2
+153176808 lrwxr-xr-x  1 ekaterinagerasimenko  staff   5 31 окт 11:49 file3 -> file1
+153176641 -rw-r--r--  2 ekaterinagerasimenko  staff  54 31 окт 11:49 file4
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % rm file1
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ls -li file2 file3 file4
+153176799 -rw-r--r--  1 ekaterinagerasimenko  staff  54 31 окт 11:49 file2
+153176808 lrwxr-xr-x  1 ekaterinagerasimenko  staff   5 31 окт 11:49 file3 -> file1
+153176641 -rw-r--r--  1 ekaterinagerasimenko  staff  54 31 окт 11:49 file4
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % cat file2 file3 file4
+Это содержимое первого файла
+cat: file3: No such file or directory
+Это содержимое первого файла
+
+2 часть:
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mv file2 new_file2
+
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mv file3 file3_2  
+
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mv file4 new_file4_2
+
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ln -s new_file2 link_2  
+
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mkdir new_directory
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % mv file3_2 new_file4_2 link_2 new_directory 
+
+3 часть:
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % touch file_dlya_vsech
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % touch file_dlya_vladeltsya
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % chmod 664 file_dlya_vsech
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % chmod 600 file_dlya_vladeltsya
