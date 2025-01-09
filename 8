@@ -1,0 +1,21 @@
+2
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % kill -l(выводим все сигналы, которые могут быть отправлены процессами)
+HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2
+
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ps aux | grep cat(получаем PID процесса cat)
+…
+ekaterinagerasimenko   610   0,0  0,1 408266320   4240   ??  S    20ноя24   0:23.68 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+ekaterinagerasimenko   604   0,0  0,1 409597584  11920   ??  S    20ноя24   2:43.45 /System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter
+root               505   0,0  0,0 408266528   4192   ??  Ss   20ноя24   0:08.78 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+_locationd         483   0,0  0,0 408170400    784   ??  S    20ноя24   0:34.73 /usr/sbin/distnoted agent
+ekaterinagerasimenko 54540   0,0  0,0 408628368   1648 s000  S+   10:19     0:00.01 grep cat
+_locationd         342   0,0  0,2 408309200  13984   ??  Ss   20ноя24  37:55.88 /usr/libexec/locationd
+root             54431   0,0  0,0 408199680   4000   ??  Ss   10:12     0:00.05 /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+ekaterinagerasimenko 54427   0,0  2,0 411557808 163712   ??  S    10:12     0:14.02 /Applications/Pages.app/Contents/MacOS/Pages
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % kill -SIGTERM 54427(отправляем сигнал SIGTERM  для завершения работы процесса, который читает из именованного канала)
+
+
+3
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ls -l | grep ".txt"
+-rw-r--r--     1 ekaterinagerasimenko  staff      5 13 ноя 17:39 test.txt
+(команда ls -l выводит список файлов и директорий, а команда grep фильтрует только те строки, которые содержат ".txt". Данные передаются через неименованный канал, который создается автоматически при использовании оператора |)
