@@ -1,0 +1,13 @@
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ %    ps -ef | grep bash                        
+  501 54081 53914   0  9:59   ttys000    0:00.01 grep bash
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ %    ps -ef | grep snapd
+  501 54085 53914   0  9:59   ttys000    0:00.00 grep snapd
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % ps -o ppid= -p 53914
+53913
+ekaterinagerasimenko@MacBook-Air-Ekaterina-2 ~ % pstree -p 53913
+-+= 00001 root /sbin/launchd
+ \-+= 37798 ekaterinagerasimenko /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal
+   \-+= 53913 root login -pf ekaterinagerasimenko
+     \-+= 53914 ekaterinagerasimenko -zsh
+       \-+= 54098 ekaterinagerasimenko pstree -p 53913
+         \--- 54099 root ps -axwwo user,pid,ppid,pgid,command
